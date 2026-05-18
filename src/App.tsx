@@ -379,7 +379,7 @@ function App() {
                 }
 
                 <div key={q.qid} className="mt-10 bg-green-800 px-3 py-3 rounded"> 
-                    <div className="mb-5 bg-blue-100 font-bold text-black text-[30px] rounded"> Question. {q.qid}　{q.qtext} </div>
+                    <div className="mb-5 bg-blue-100 font-bold text-black text-[30px] rounded"> Question. {q.qid} <br /> {q.qtext} </div>
                     {q.options.map((opt) => (
                     <label key={opt} className="block">
                         <input 
@@ -388,7 +388,7 @@ function App() {
                             value={opt} 
                             checked={answers[q.qid] === opt}
                             onChange={() => handleRadioclick(q.qid , opt)}
-                            className="text-[20px]"
+                            className="text-[15px]"
                         />
                         {opt} / ({countsperqid[qidperans[opt]] != 0 ? Math.round(countsperans[opt] / countsperqid[qidperans[opt]] * 100) : 0} %)
                     </label>
