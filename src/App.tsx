@@ -192,7 +192,7 @@ function App() {
     const [personality , setPersonality] = useState<string>("");
     const [submitted , setSubmitted] = useState(false);
 
-    const [allanswers , setAllanswers] = useState<allanswerstype[]>([])
+    const [, setAllanswers] = useState<allanswerstype[]>([])
 
     useEffect(() => {
         getAnswersList();
